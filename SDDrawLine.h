@@ -1,20 +1,23 @@
-# SDDDrawLine
-类方法实现layer层的动画，绘制虚线、实线、文字，给父类加阴影，以及给View上加渐变
+//
+//  SDDrawLine.h
+//  freeStuff
+//
+//  Created by 孙号斌 on 2017/11/23.
+//  Copyright © 2017年 孙号斌. All rights reserved.
+//
 
----
-```
 #import <Foundation/Foundation.h>
 
 @interface SDDrawLine : NSObject
 /**
-*  返回一个layer动画
-*
-*  @param type     动画的类型   fade    moveIn  push    reveal  cube(立方)    rippleEffect(波纹)    suckEffect(吸; 吮)
-oglFlip(弹，掷)   pageCurl    pageUnCurl  cameraIrisHollowOpen    cameraIrisHollowClose等
-*  @param subtype  方向的类型。  fromLeft, fromRight, fromTop, fromBottom
-*  @param duration 动画时长
-*  @return CATransition对象
-*/
+ *  返回一个layer动画
+ *
+ *  @param type     动画的类型   fade    moveIn  push    reveal  cube(立方)    rippleEffect(波纹)    suckEffect(吸; 吮)
+ oglFlip(弹，掷)   pageCurl    pageUnCurl  cameraIrisHollowOpen    cameraIrisHollowClose等
+ *  @param subtype  方向的类型。  fromLeft, fromRight, fromTop, fromBottom
+ *  @param duration 动画时长
+ *  @return CATransition对象
+ */
 + (CATransition *)layerAnimationWithType:(NSString *)type
                                  subtype:(NSString *)subtype
                                 duration:(NSInteger)duration;
@@ -62,4 +65,3 @@ oglFlip(弹，掷)   pageCurl    pageUnCurl  cameraIrisHollowOpen    cameraIrisH
                   endPoint:(CGPoint)endPoint
               cornerRadius:(CGFloat)cornerRadius;
 @end
-```
